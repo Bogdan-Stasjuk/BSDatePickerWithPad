@@ -1,0 +1,399 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		434A7CE11941FD0E008F52E1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 434A7CE01941FD0E008F52E1 /* main.m */; };
+		434A7CE41941FD0E008F52E1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 434A7CE31941FD0E008F52E1 /* AppDelegate.m */; };
+		434A7CE61941FD0E008F52E1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 434A7CE51941FD0E008F52E1 /* Images.xcassets */; };
+		434A7CF21941FD0E008F52E1 /* UIDatePickerTextFieldUsageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 434A7CF11941FD0E008F52E1 /* UIDatePickerTextFieldUsageTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		434A7CEC1941FD0E008F52E1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 434A7CD31941FD0E008F52E1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 434A7CDA1941FD0E008F52E1;
+			remoteInfo = UIDatePickerTextFieldUsage;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		434A7CDB1941FD0E008F52E1 /* UIDatePickerTextFieldUsage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIDatePickerTextFieldUsage.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		434A7CDF1941FD0E008F52E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		434A7CE01941FD0E008F52E1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		434A7CE21941FD0E008F52E1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		434A7CE31941FD0E008F52E1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		434A7CE51941FD0E008F52E1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		434A7CEB1941FD0E008F52E1 /* UIDatePickerTextFieldUsageTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UIDatePickerTextFieldUsageTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		434A7CF01941FD0E008F52E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		434A7CF11941FD0E008F52E1 /* UIDatePickerTextFieldUsageTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIDatePickerTextFieldUsageTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		434A7CD81941FD0E008F52E1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		434A7CE81941FD0E008F52E1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		434A7CD21941FD0E008F52E1 = {
+			isa = PBXGroup;
+			children = (
+				434A7CDD1941FD0E008F52E1 /* UIDatePickerTextFieldUsage */,
+				434A7CEE1941FD0E008F52E1 /* UIDatePickerTextFieldUsageTests */,
+				434A7CDC1941FD0E008F52E1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		434A7CDC1941FD0E008F52E1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				434A7CDB1941FD0E008F52E1 /* UIDatePickerTextFieldUsage.app */,
+				434A7CEB1941FD0E008F52E1 /* UIDatePickerTextFieldUsageTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		434A7CDD1941FD0E008F52E1 /* UIDatePickerTextFieldUsage */ = {
+			isa = PBXGroup;
+			children = (
+				434A7CE21941FD0E008F52E1 /* AppDelegate.h */,
+				434A7CE31941FD0E008F52E1 /* AppDelegate.m */,
+				434A7CE51941FD0E008F52E1 /* Images.xcassets */,
+				434A7CDE1941FD0E008F52E1 /* Supporting Files */,
+			);
+			path = UIDatePickerTextFieldUsage;
+			sourceTree = "<group>";
+		};
+		434A7CDE1941FD0E008F52E1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				434A7CDF1941FD0E008F52E1 /* Info.plist */,
+				434A7CE01941FD0E008F52E1 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		434A7CEE1941FD0E008F52E1 /* UIDatePickerTextFieldUsageTests */ = {
+			isa = PBXGroup;
+			children = (
+				434A7CF11941FD0E008F52E1 /* UIDatePickerTextFieldUsageTests.m */,
+				434A7CEF1941FD0E008F52E1 /* Supporting Files */,
+			);
+			path = UIDatePickerTextFieldUsageTests;
+			sourceTree = "<group>";
+		};
+		434A7CEF1941FD0E008F52E1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				434A7CF01941FD0E008F52E1 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		434A7CDA1941FD0E008F52E1 /* UIDatePickerTextFieldUsage */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 434A7CF51941FD0E008F52E1 /* Build configuration list for PBXNativeTarget "UIDatePickerTextFieldUsage" */;
+			buildPhases = (
+				434A7CD71941FD0E008F52E1 /* Sources */,
+				434A7CD81941FD0E008F52E1 /* Frameworks */,
+				434A7CD91941FD0E008F52E1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UIDatePickerTextFieldUsage;
+			productName = UIDatePickerTextFieldUsage;
+			productReference = 434A7CDB1941FD0E008F52E1 /* UIDatePickerTextFieldUsage.app */;
+			productType = "com.apple.product-type.application";
+		};
+		434A7CEA1941FD0E008F52E1 /* UIDatePickerTextFieldUsageTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 434A7CF81941FD0E008F52E1 /* Build configuration list for PBXNativeTarget "UIDatePickerTextFieldUsageTests" */;
+			buildPhases = (
+				434A7CE71941FD0E008F52E1 /* Sources */,
+				434A7CE81941FD0E008F52E1 /* Frameworks */,
+				434A7CE91941FD0E008F52E1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				434A7CED1941FD0E008F52E1 /* PBXTargetDependency */,
+			);
+			name = UIDatePickerTextFieldUsageTests;
+			productName = UIDatePickerTextFieldUsageTests;
+			productReference = 434A7CEB1941FD0E008F52E1 /* UIDatePickerTextFieldUsageTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		434A7CD31941FD0E008F52E1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Bogdan Stasjuk";
+				TargetAttributes = {
+					434A7CDA1941FD0E008F52E1 = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					434A7CEA1941FD0E008F52E1 = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = 434A7CDA1941FD0E008F52E1;
+					};
+				};
+			};
+			buildConfigurationList = 434A7CD61941FD0E008F52E1 /* Build configuration list for PBXProject "UIDatePickerTextFieldUsage" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 434A7CD21941FD0E008F52E1;
+			productRefGroup = 434A7CDC1941FD0E008F52E1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				434A7CDA1941FD0E008F52E1 /* UIDatePickerTextFieldUsage */,
+				434A7CEA1941FD0E008F52E1 /* UIDatePickerTextFieldUsageTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		434A7CD91941FD0E008F52E1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				434A7CE61941FD0E008F52E1 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		434A7CE91941FD0E008F52E1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		434A7CD71941FD0E008F52E1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				434A7CE41941FD0E008F52E1 /* AppDelegate.m in Sources */,
+				434A7CE11941FD0E008F52E1 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		434A7CE71941FD0E008F52E1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				434A7CF21941FD0E008F52E1 /* UIDatePickerTextFieldUsageTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		434A7CED1941FD0E008F52E1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 434A7CDA1941FD0E008F52E1 /* UIDatePickerTextFieldUsage */;
+			targetProxy = 434A7CEC1941FD0E008F52E1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		434A7CF31941FD0E008F52E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				METAL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		434A7CF41941FD0E008F52E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				METAL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		434A7CF61941FD0E008F52E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = UIDatePickerTextFieldUsage/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		434A7CF71941FD0E008F52E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = UIDatePickerTextFieldUsage/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		434A7CF91941FD0E008F52E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/UIDatePickerTextFieldUsage.app/UIDatePickerTextFieldUsage";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = UIDatePickerTextFieldUsageTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Debug;
+		};
+		434A7CFA1941FD0E008F52E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/UIDatePickerTextFieldUsage.app/UIDatePickerTextFieldUsage";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = UIDatePickerTextFieldUsageTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		434A7CD61941FD0E008F52E1 /* Build configuration list for PBXProject "UIDatePickerTextFieldUsage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				434A7CF31941FD0E008F52E1 /* Debug */,
+				434A7CF41941FD0E008F52E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		434A7CF51941FD0E008F52E1 /* Build configuration list for PBXNativeTarget "UIDatePickerTextFieldUsage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				434A7CF61941FD0E008F52E1 /* Debug */,
+				434A7CF71941FD0E008F52E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		434A7CF81941FD0E008F52E1 /* Build configuration list for PBXNativeTarget "UIDatePickerTextFieldUsageTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				434A7CF91941FD0E008F52E1 /* Debug */,
+				434A7CFA1941FD0E008F52E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 434A7CD31941FD0E008F52E1 /* Project object */;
+}
