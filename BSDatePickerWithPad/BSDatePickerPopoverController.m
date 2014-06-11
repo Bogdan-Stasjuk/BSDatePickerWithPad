@@ -13,7 +13,8 @@
 
 @interface BSDatePickerPopoverController () <UITextFieldDelegate, UIPopoverControllerDelegate>
 
-@property(nonatomic, strong) UITextField *textField;
+@property(strong, nonatomic) UITextField *textField;
+@property(weak, nonatomic)   UITextField *localTextField;
 
 @end
 
@@ -27,7 +28,7 @@
     self = [super initWithContentViewController:datePickerViewController];
     if (self) {
         self.delegate = self;
-        
+        self.localTextField = datePickerViewController.localTextField;
         self.textField = textField;
         self.textField.delegate = self;
     }
@@ -77,7 +78,7 @@
 - (BOOL)popoverControllerShouldDismissPopover:(UIPopoverController *)popoverController
 {
     if ([self.datePickerDelegate respondsToSelector:@selector(isValidPopoverDate:)]) {
-        return [self.datePickerDelegate isValidPopoverDate:self.textField.text];
+        return [self.datePickerDelegate isValidPopoverDate:self.localTextField.text];
     }
     return YES;
 }

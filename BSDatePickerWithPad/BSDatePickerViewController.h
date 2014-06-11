@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+
 @interface BSDatePickerViewController : UIViewController
+
+@property(strong, readonly, nonatomic) UITextField *localTextField;
 
 - (id)initWithTextField:(UITextField *)textField;
 

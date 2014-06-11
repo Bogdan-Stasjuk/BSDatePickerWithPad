@@ -15,7 +15,8 @@
 
 @interface TestViewController () <BSDatePickerPopoverControllerDelegate>
 
-@property(strong, nonatomic) BSDatePickerPopoverController *popover;
+@property(strong, nonatomic) BSDatePickerPopoverController  *popover;
+@property(strong, nonatomic) UITextField                    *textField;
 
 @end
 
@@ -39,15 +40,15 @@
     
     CGFloat textFieldWidth = 200.f;
     CGFloat textFieldHeight = 30.f;
-    UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake((self.view.frame.size.width - textFieldWidth) / 2,
+    self.textField = [[UITextField alloc] initWithFrame:CGRectMake((self.view.frame.size.width - textFieldWidth) / 2,
                                                                            (self.view.frame.size.height - textFieldHeight) / 2,
                                                                            textFieldWidth,
                                                                            textFieldHeight)];
-    textField.backgroundColor = [UIColor lightGrayColor];
-    textField.textAlignment = NSTextAlignmentCenter;
-    [self.view addSubview:textField];
+    self.textField.backgroundColor = [UIColor lightGrayColor];
+    self.textField.textAlignment = NSTextAlignmentCenter;
+    [self.view addSubview:self.textField];
    
-    self.popover = [[BSDatePickerPopoverController alloc] initWithTextField:textField];
+    self.popover = [[BSDatePickerPopoverController alloc] initWithTextField:self.textField];
     self.popover.popoverPosition = BSPopoverPositionTop;
     self.popover.datePickerDelegate = self;
 }
@@ -59,7 +60,11 @@
 {
     NSDate *dateToValidate = [NSDate getDateFromString:date withFormat:NSDateFormatDmy4Hm24 andTimeZone:NSDateTimeZoneUTC];
     
-    return [dateToValidate compare:[NSDate date]] == NSOrderedDescending;
+    BOOL result = [dateToValidate compare:[NSDate date]] == NSOrderedDescending;
+    if (result) {
+        self.textField.text = date;
+    }
+    return result;
 }
 
 @end

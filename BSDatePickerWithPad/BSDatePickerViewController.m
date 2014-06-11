@@ -70,7 +70,6 @@ static UIView *inputViewCap;
 - (void)dateChanged:(UIDatePicker *)datePicker
 {
     NSString *date = [NSDate getStringFromDate:datePicker.date withFormat:NSDateFormatDmy4Hm24 andTimeZone:NSDateTimeZoneGMT];
-    self.mainTextField.text = date;
     self.localTextField.text = date;
 }
 
