@@ -12,6 +12,6 @@ Pod::Spec.new do |s|
   s.requires_arc 	= true
   s.source_files 	= 'BSDatePickerWithPad/*.{h,m}'
   s.public_header_files   	= 'BSDatePickerWithPad/*.h'
-  s.dependency 'BSNumPad', :git => 'https://github.com/Bogdan-Stasjuk/BSNumPad.git'
-  s.dependency 'NSDate+Helpers', :git => 'https://github.com/Bogdan-Stasjuk/NSDate-Helpers.git'
+  s.dependency 'BSNumPad'
+  s.dependency 'NSDate+Helpers'
 end
