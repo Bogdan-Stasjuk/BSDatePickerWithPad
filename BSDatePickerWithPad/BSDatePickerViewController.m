@@ -108,6 +108,8 @@ static UIView *inputViewCap;
     self.datePicker.date = [NSDate date];
     [self.datePicker addTarget:self action:@selector(dateChanged:) forControlEvents:UIControlEventValueChanged];
     [self.view addSubview:self.datePicker];
+    
+    [self isValidTextFieldText:self.mainTextField.text];
 }
 
 - (void)setupLocalTextFieldWithOriginY:(CGFloat)originY andWidth:(CGFloat)width
