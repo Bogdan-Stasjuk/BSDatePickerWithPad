@@ -11,9 +11,17 @@
 #import <BSNumPad/BSNumPadPopoverConotroller.h>
 
 
+@protocol BSDatePickerPopoverControllerDelegate;
+
+
 @interface BSDatePickerPopoverController : UIPopoverController
 
-@property(nonatomic, assign) BSPopoverPosition popoverPosition;
+/*!
+ * @brief BSDatePickerPopoverControllerDelegate property
+ */
+@property(weak, nonatomic) id<BSDatePickerPopoverControllerDelegate> datePickerDelegate;
+
+@property(assign, nonatomic) BSPopoverPosition popoverPosition;
 
 - (id)initWithTextField:(UITextField *)textField;
 
@@ -22,5 +30,13 @@
 + (id)new __attribute__((unavailable));
 - (id)init __attribute__((unavailable));
 - (id)initWithContentViewController:(UIViewController *)viewController __attribute__((unavailable));
+
+@end
+
+
+@protocol BSDatePickerPopoverControllerDelegate <NSObject>
+
+@optional
+- (BOOL)isValidPopoverDate:(NSString *)date;
 
 @end

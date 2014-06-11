@@ -74,6 +74,14 @@
 
 #pragma mark -UIPopoverControllerDelegate
 
+- (BOOL)popoverControllerShouldDismissPopover:(UIPopoverController *)popoverController
+{
+    if ([self.datePickerDelegate respondsToSelector:@selector(isValidPopoverDate:)]) {
+        return [self.datePickerDelegate isValidPopoverDate:self.textField.text];
+    }
+    return YES;
+}
+
 - (void)popoverControllerDidDismissPopover:(UIPopoverController *)popoverController
 {
     [self.textField resignFirstResponder];

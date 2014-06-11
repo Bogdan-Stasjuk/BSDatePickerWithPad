@@ -10,8 +10,10 @@
 
 #import "BSDatePickerPopoverController.h"
 
+#import <NSDate+Helpers/NSDate+Helpers.h>
 
-@interface TestViewController ()
+
+@interface TestViewController () <BSDatePickerPopoverControllerDelegate>
 
 @property(strong, nonatomic) BSDatePickerPopoverController *popover;
 
@@ -47,6 +49,17 @@
    
     self.popover = [[BSDatePickerPopoverController alloc] initWithTextField:textField];
     self.popover.popoverPosition = BSPopoverPositionTop;
+    self.popover.datePickerDelegate = self;
+}
+
+
+#pragma mark - BSDatePickerPopoverControllerDelegate
+
+- (BOOL)isValidPopoverDate:(NSString *)date
+{
+    NSDate *dateToValidate = [NSDate getDateFromString:date withFormat:NSDateFormatDmy4Hm24 andTimeZone:NSDateTimeZoneUTC];
+    
+    return [dateToValidate compare:[NSDate date]] == NSOrderedDescending;
 }
 
 @end
