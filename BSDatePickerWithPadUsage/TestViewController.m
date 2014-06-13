@@ -46,6 +46,7 @@
                                                                            textFieldHeight)];
     self.textField.backgroundColor = [UIColor lightGrayColor];
     self.textField.textAlignment = NSTextAlignmentCenter;
+    self.textField.text = @"placeholder";
     [self.view addSubview:self.textField];
    
     self.popover = [[BSDatePickerPopoverController alloc] initWithTextField:self.textField];
@@ -58,7 +59,7 @@
 
 - (BOOL)isValidPopoverDate:(NSString *)date
 {
-    NSDate *dateToValidate = [NSDate getDateFromString:date withFormat:NSDateFormatDmy4Hm24 andTimeZone:NSDateTimeZoneUTC];
+    NSDate *dateToValidate = [NSDate dateFromString:date withFormat:NSDateFormatDmy4Hm24 andTimeZone:NSDateTimeZoneUTC];
     
     BOOL result = [dateToValidate compare:[NSDate date]] == NSOrderedDescending;
     if (result) {

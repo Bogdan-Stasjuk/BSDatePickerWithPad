@@ -56,7 +56,7 @@ static UIView *inputViewCap;
 
 - (BOOL)isValidTextFieldText:(NSString *)text
 {
-    NSDate *date = [NSDate getDateFromString:text withFormat:NSDateFormatDmy4Hm24 andTimeZone:NSDateTimeZoneGMT];
+    NSDate *date = [NSDate dateFromString:text withFormat:NSDateFormatDmy4Hm24 andTimeZone:NSDateTimeZoneGMT];
     if (date) {
         self.datePicker.date = date;
         [self dateChanged:self.datePicker];
@@ -69,8 +69,8 @@ static UIView *inputViewCap;
 
 - (void)dateChanged:(UIDatePicker *)datePicker
 {
-    NSString *date = [NSDate getStringFromDate:datePicker.date withFormat:NSDateFormatDmy4Hm24 andTimeZone:NSDateTimeZoneGMT];
-    self.localTextField.text = date;
+    NSString *date = [NSDate stringFromDate:datePicker.date withFormat:NSDateFormatDmy4Hm24 andTimeZone:NSDateTimeZoneGMT];
+    self.localTextField.text = date ? date : [NSDate stringFromDate:[NSDate date] withFormat:NSDateFormatDmy4Hm24 andTimeZone:NSDateTimeZoneGMT];
 }
 
 #pragma mark -Other
@@ -95,9 +95,7 @@ static UIView *inputViewCap;
     self.numPadPopover.padPosition = BSPopoverPositionBottom;
     self.numPadPopover.padDelegate = self;
     
-    if (!self.mainTextField.text || [self.mainTextField.text isEqualToString:@""]) {
-        [self dateChanged:self.datePicker];
-    }
+    [self dateChanged:self.datePicker];
 }
 
 - (void)setupDatePicker
