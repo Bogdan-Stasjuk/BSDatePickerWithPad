@@ -22,6 +22,17 @@
 
 #pragma mark - Public methods
 
+#pragma mark -UIPopoverController
+
+- (void)dismissPopoverAnimated:(BOOL)animated
+{
+    [super dismissPopoverAnimated:animated];
+    
+    [self popoverDidDisappear];
+}
+
+#pragma mark -Other
+
 - (id)initWithTextField:(UITextField *)textField
 {
     BSDatePickerViewController *datePickerViewController = [[BSDatePickerViewController alloc] initWithTextField:textField];
@@ -85,7 +96,18 @@
 
 - (void)popoverControllerDidDismissPopover:(UIPopoverController *)popoverController
 {
+    [self popoverDidDisappear];
+}
+
+#pragma mark -Other
+
+- (void)popoverDidDisappear
+{
     [self.textField resignFirstResponder];
+    
+    if ([self.datePickerDelegate respondsToSelector:@selector(datePickerPopoverDidDisappear)]) {
+        [self.datePickerDelegate datePickerPopoverDidDisappear];
+    }
 }
 
 @end

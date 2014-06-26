@@ -38,5 +38,6 @@
 
 @optional
 - (BOOL)isValidPopoverDate:(NSString *)date;
+- (void)datePickerPopoverDidDisappear;
 
 @end
