@@ -91,7 +91,7 @@ static UIView *inputViewCap;
 
     self.preferredContentSize = CGSizeMake(self.datePicker.frame.size.width, self.datePicker.frame.size.height + self.localTextField.frame.size.height);
     
-    self.numPadPopover = [[BSNumPadPopoverConotroller alloc] initWithTextField:self.localTextField andTextFieldFormat:BSTextFieldFormatDate];
+    self.numPadPopover = [[BSNumPadPopoverConotroller alloc] initWithTextField:self.localTextField andTextFieldFormat:BSTextFieldFormatDate andNextKey:NO];
     self.numPadPopover.padPosition = BSPopoverPositionBottom;
     self.numPadPopover.padDelegate = self;
     
