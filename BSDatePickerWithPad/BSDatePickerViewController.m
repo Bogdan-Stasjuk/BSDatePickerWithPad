@@ -54,7 +54,7 @@ static UIView *inputViewCap;
 
 #pragma mark -BSNumPadPopoverConotrollerDelegate
 
-- (BOOL)isValidTextFieldText:(NSString *)text
+- (BOOL)isValidTextFieldText:(NSString *)text onNextKeyPress:(BOOL)nextPressed
 {
     NSDate *date = [NSDate dateFromString:text withFormat:NSDateFormatDmy4Hm24 andTimeZone:NSDateTimeZoneGMT];
     if (date) {
@@ -107,7 +107,7 @@ static UIView *inputViewCap;
     [self.datePicker addTarget:self action:@selector(dateChanged:) forControlEvents:UIControlEventValueChanged];
     [self.view addSubview:self.datePicker];
     
-    [self isValidTextFieldText:self.mainTextField.text];
+    [self isValidTextFieldText:self.mainTextField.text onNextKeyPress:NO];
 }
 
 - (void)setupLocalTextFieldWithOriginY:(CGFloat)originY andWidth:(CGFloat)width
