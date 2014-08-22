@@ -67,16 +67,14 @@ static UIView *inputViewCap;
 
 #pragma mark -Actions
 
-- (void)dateChanged:(UIDatePicker *)datePicker
-{
+- (void)dateChanged:(UIDatePicker *)datePicker {
     NSString *date = [NSDate stringFromDate:datePicker.date withFormat:NSDateFormatDmy4Hm24 andTimeZone:NSDateTimeZoneGMT];
     self.localTextField.text = date ? date : [NSDate stringFromDate:[NSDate date] withFormat:NSDateFormatDmy4Hm24 andTimeZone:NSDateTimeZoneGMT];
 }
 
 #pragma mark -Other
 
-- (UIView *)inputViewCap
-{
+- (UIView *)inputViewCap {
     if (inputViewCap == nil) {
         inputViewCap = [UIView new];
         inputViewCap.backgroundColor = [UIColor clearColor];
@@ -84,22 +82,20 @@ static UIView *inputViewCap;
     return inputViewCap;
 }
 
-- (void)setupSubviews
-{
+- (void)setupSubviews {
     [self setupDatePicker];
     [self setupLocalTextFieldWithOriginY:self.datePicker.frame.size.height andWidth:self.datePicker.frame.size.width];
 
     self.preferredContentSize = CGSizeMake(self.datePicker.frame.size.width, self.datePicker.frame.size.height + self.localTextField.frame.size.height);
     
-    self.numPadPopover = [[BSNumPadPopoverConotroller alloc] initWithTextField:self.localTextField andTextFieldFormat:BSTextFieldFormatDate andNextKey:NO];
+    self.numPadPopover = [[BSNumPadPopoverConotroller alloc] initWithTextField:self.localTextField andTextFieldFormat:BSTextFieldFormatDate andNextKey:NO nextButtonTitle:nil];
     self.numPadPopover.padPosition = BSPopoverPositionBottom;
     self.numPadPopover.padDelegate = self;
     
     [self dateChanged:self.datePicker];
 }
 
-- (void)setupDatePicker
-{
+- (void)setupDatePicker {
     self.datePicker = [UIDatePicker new];
     self.datePicker.datePickerMode = UIDatePickerModeDateAndTime;
     self.datePicker.timeZone = [NSDate timeZone:NSDateTimeZoneGMT];
@@ -110,8 +106,7 @@ static UIView *inputViewCap;
     [self isValidTextFieldText:self.mainTextField.text onNextKeyPress:NO];
 }
 
-- (void)setupLocalTextFieldWithOriginY:(CGFloat)originY andWidth:(CGFloat)width
-{
+- (void)setupLocalTextFieldWithOriginY:(CGFloat)originY andWidth:(CGFloat)width {
     CGFloat textFieldHeight = 30.f;
     self.localTextField = [[UITextField alloc] initWithFrame:CGRectMake(0.f, originY, width, textFieldHeight)];
     self.localTextField.backgroundColor = [UIColor lightGrayColor];

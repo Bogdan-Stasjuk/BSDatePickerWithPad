@@ -10,7 +10,9 @@ Numeric keyboard in UIPopoverController for UITextField inspired by [ZenKeyboard
 
 @property(nonatomic, assign) BSPopoverPosition padPosition;
 
-- (id)initWithTextField:(UITextField *)textField andTextFieldFormat:(BSTextFieldFormat)textFieldFormat;
+- (instancetype)initWithTextField:(UITextField *)textField andTextFieldFormat:(BSTextFieldFormat)textFieldFormat andNextKey:(BOOL)nextKeyExist;
+
+- (void)dismissPopoverAnimated:(BOOL)animated onNextKeyPress:(BOOL)nextKeyPressed;
 ```
 
 There are following Popover positions and TextField formats:
@@ -35,18 +37,18 @@ __BSNumPadPopoverConotrollerDelegate__ protocol:
 
 ```objc
 @optional
-- (BOOL)isValidTextFieldText:(NSString *)text;
+- (BOOL)isValidTextFieldText:(NSString *)text onNextKeyPress:(BOOL)nextPressed;
 - (void)popoverWillAppear;
-- (void)popoverDidDisappear;
+- (void)popoverDidDisappearOnNextPress:(BOOL)nextPressed;
 ```
 
-`isValidTextFieldText:` with result `TRUE` gives possibility to dismiss numpad view.
+`isValidTextFieldText:onNextKeyPress:` with result `TRUE` gives possibility to dismiss numpad view.
 
 
 ##Initialization
 
 ```objc
-    self.numPadPopoverConotroller = [[BSNumPadPopoverConotroller alloc] initWithTextField:textField andTextFieldFormat:BSTextFieldFormatDate];
+    self.numPadPopoverConotroller = [[BSNumPadPopoverConotroller alloc] initWithTextField:textField andTextFieldFormat:BSTextFieldFormatFloat andNextKey:YES];
     self.numPadPopoverConotroller.padDelegate = self;
     self.numPadPopoverConotroller.padPosition = BSPopoverPositionBottom;
 ```
@@ -56,6 +58,8 @@ NumPad appears on `textFieldDidBeginEditing:` message.
 
 ##Numeric keyboard view: 
 <img src="https://raw.githubusercontent.com/Bogdan-Stasjuk/BSNumPad/master/NumPadScreenShot.png" />
+
+<img src="https://raw.githubusercontent.com/Bogdan-Stasjuk/BSNumPad/master/NumPadWithNextBtnScreenShot.png" />
 
 
 Demo

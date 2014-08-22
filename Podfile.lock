@@ -1,19 +1,13 @@
 PODS:
-  - BSNumPad (0.1.4)
+  - BSNumPad (1.0.0)
   - NSDate+Helpers (0.1.2)
 
 DEPENDENCIES:
-  - BSNumPad (from `https://github.com/Bogdan-Stasjuk/BSNumPad.git`)
-  - NSDate+Helpers (from `https://github.com/Bogdan-Stasjuk/NSDate-Helpers.git`)
-
-EXTERNAL SOURCES:
-  BSNumPad:
-    :git: https://github.com/Bogdan-Stasjuk/BSNumPad.git
-  NSDate+Helpers:
-    :git: https://github.com/Bogdan-Stasjuk/NSDate-Helpers.git
+  - BSNumPad
+  - NSDate+Helpers
 
 SPEC CHECKSUMS:
-  BSNumPad: 6a3b615ef7d7815ca8e78040be0321916ac92f93
-  NSDate+Helpers: dd00af55a03de283cc73993d4ab789cc338d7dcf
+  BSNumPad: 33a13dfcb5efc265c7b1201e9c7992abd2b3360d
+  NSDate+Helpers: 3f09f91f2e6149994eca25ac9b6d163a2b94535e
 
 COCOAPODS: 0.33.1
