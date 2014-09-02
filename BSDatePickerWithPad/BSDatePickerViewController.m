@@ -17,7 +17,7 @@
 @property(strong, nonatomic)    UIDatePicker                *datePicker;
 @property(weak, nonatomic)      UITextField                 *mainTextField;
 @property(strong, nonatomic)    UITextField                 *localTextField;
-@property(assign, nonatomic)    id<UITextInput>             textInputDelegate;
+@property(weak, nonatomic)      id<UITextInput>             textInputDelegate;
 @property(strong, nonatomic)    BSNumPadPopoverConotroller  *numPadPopover;
 
 @end
@@ -29,8 +29,7 @@ static UIView *inputViewCap;
 
 #pragma mark - Public methods
 
-- (id)initWithTextField:(UITextField *)textField
-{
+- (id)initWithTextField:(UITextField *)textField {
     self = [super init];
     if (self) {
         self.mainTextField = textField;

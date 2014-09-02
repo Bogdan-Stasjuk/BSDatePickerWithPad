@@ -23,19 +23,17 @@
 
 @implementation TestViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
     
 }
 
-- (void)viewWillAppear:(BOOL)animated
-{
+- (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    
 }
 
-- (void)viewDidAppear:(BOOL)animated
-{
+- (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
     CGFloat textFieldWidth = 200.f;
@@ -57,8 +55,7 @@
 
 #pragma mark - BSDatePickerPopoverControllerDelegate
 
-- (BOOL)isValidPopoverDate:(NSString *)date
-{
+- (BOOL)isValidPopoverDate:(NSString *)date {
     NSDate *dateToValidate = [NSDate dateFromString:date withFormat:NSDateFormatDmy4Hm24 andTimeZone:NSDateTimeZoneUTC];
     
     BOOL result = [dateToValidate compare:[NSDate date]] == NSOrderedDescending;

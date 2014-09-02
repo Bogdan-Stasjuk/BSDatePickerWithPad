@@ -13,10 +13,11 @@
 
 @interface BSDatePickerPopoverController () <UITextFieldDelegate, UIPopoverControllerDelegate>
 
-@property(strong, nonatomic) UITextField *textField;
+@property(weak, nonatomic) UITextField *textField;
 @property(weak, nonatomic)   UITextField *localTextField;
 
 @end
+
 
 @implementation BSDatePickerPopoverController
 
@@ -24,8 +25,7 @@
 
 #pragma mark -UIPopoverController
 
-- (void)dismissPopoverAnimated:(BOOL)animated
-{
+- (void)dismissPopoverAnimated:(BOOL)animated {
     [super dismissPopoverAnimated:animated];
     
     [self popoverDidDisappear];
@@ -33,8 +33,7 @@
 
 #pragma mark -Other
 
-- (id)initWithTextField:(UITextField *)textField
-{
+- (id)initWithTextField:(UITextField *)textField {
     BSDatePickerViewController *datePickerViewController = [[BSDatePickerViewController alloc] initWithTextField:textField];
     self = [super initWithContentViewController:datePickerViewController];
     if (self) {
@@ -51,8 +50,7 @@
 
 #pragma mark -UITextFieldDelegate
 
-- (void)textFieldDidBeginEditing:(UITextField *)textField
-{
+- (void)textFieldDidBeginEditing:(UITextField *)textField {
     NSInteger padPosX = 0.f;
     NSInteger padPosY = 0.f;
     UIPopoverArrowDirection arrowDirection = UIPopoverArrowDirectionAny;
@@ -86,23 +84,20 @@
 
 #pragma mark -UIPopoverControllerDelegate
 
-- (BOOL)popoverControllerShouldDismissPopover:(UIPopoverController *)popoverController
-{
+- (BOOL)popoverControllerShouldDismissPopover:(UIPopoverController *)popoverController {
     if ([self.datePickerDelegate respondsToSelector:@selector(isValidPopoverDate:)]) {
         return [self.datePickerDelegate isValidPopoverDate:self.localTextField.text];
     }
     return YES;
 }
 
-- (void)popoverControllerDidDismissPopover:(UIPopoverController *)popoverController
-{
+- (void)popoverControllerDidDismissPopover:(UIPopoverController *)popoverController {
     [self popoverDidDisappear];
 }
 
 #pragma mark -Other
 
-- (void)popoverDidDisappear
-{
+- (void)popoverDidDisappear {
     [self.textField resignFirstResponder];
     
     if ([self.datePickerDelegate respondsToSelector:@selector(datePickerPopoverDidDisappear)]) {
