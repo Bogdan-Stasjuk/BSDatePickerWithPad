@@ -53,7 +53,7 @@ pod 'NSDate+Helpers'
 
 DatePickerPopover appears on `textFieldDidBeginEditing:` message.
 
-##Numeric keyboard view: 
+##DatePickerPopover view: 
 <img src="https://raw.githubusercontent.com/Bogdan-Stasjuk/BSDatePickerWithPad/master/DatePicker.png" />
 
 <img src="https://raw.githubusercontent.com/Bogdan-Stasjuk/BSDatePickerWithPad/master/DatePickerWithNumPad.png" />
