@@ -51,6 +51,10 @@
 #pragma mark -UITextFieldDelegate
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField {
+    if (self.textField.window == nil) {
+        return;
+    }
+    
     NSInteger padPosX = 0.f;
     NSInteger padPosY = 0.f;
     UIPopoverArrowDirection arrowDirection = UIPopoverArrowDirectionAny;
